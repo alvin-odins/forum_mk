@@ -1,0 +1,22 @@
+!!!
+%html
+%head
+	%title Odns Rails Forum
+	= csrf_meta_tags 
+	= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+	%link{rel:"Stylesheet", href:"https://fonts.googleapis.com/css?family=Lato:400,300,700", type:"text/css"}
+	%link{rel:"Stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css", type:"text/css"}
+	= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' 
+%body
+	%header.main_header.clearfix
+		.wrapper
+			#logo
+				%p Odns Rails Forum
+			#buttons
+				= link_to "New Post", new_post_path
+
+	.wrapper
+		%p.notice= notice
+		%p.alert= alert
+	.wrapper
+		= yield
